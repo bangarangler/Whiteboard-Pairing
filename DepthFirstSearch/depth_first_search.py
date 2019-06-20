@@ -1,6 +1,3 @@
-# NOTE: python3 required!
-
-# Recursive implementation
 def recursive_depth_first_for_each(node, cb):
     cb(node.value)
 
@@ -8,19 +5,15 @@ def recursive_depth_first_for_each(node, cb):
         recursive_depth_first_for_each(node.left, cb)
 
     if node.right:
-        recursive_depth_first_for_each(node.right, cb)
+        iterative_depth_first_for_each(node.right, cb)
 
-# Iterative implementation
 def iterative_depth_first_for_each(node, cb):
-    # use a stack to achieve the desired order
     stack = []
     stack.append(node)
 
     while len(stack) > 0:
         current = stack.pop()
-        # in order to achieve a left-to-right depth-first
-        # ordering, the right node needs to be pushed
-        # to the stack first
+
         if current.right:
             stack.append(current.right)
 
@@ -43,7 +36,6 @@ class BinaryTreeNode:
         self.right = BinaryTreeNode(value)
         return self.right
 
-# Some tests
 root = BinaryTreeNode(6)
 root.insert_left(10)
 root.insert_right(18)
