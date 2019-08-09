@@ -29,7 +29,7 @@ class Stack {
 }
 ```
 
-Write a function `sortStack` that receives a stack of integers into ascending order (with largest integers on top) and returns another stack with sorted integers. You may use at most one additional stack to hold items, but you may not copy the elements into any other data structure. 
+Write a function `sortStack` that receives a stack of integers into ascending order and returns another stack with sorted integers. You may use at most one additional stack to hold items, but you may not copy the elements into any other data structure.
 
 Example:
 ```js
